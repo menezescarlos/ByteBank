@@ -2,21 +2,35 @@ package br.com.bytebank.referenciasdeobjetos;
 
 public class TestaConta {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		Conta contaCorrente = new Conta();
-		contaCorrente.agencia = 123;
-		contaCorrente.numero = 123456;
-		contaCorrente.saldo = 100.20;
+		//Conta contaComum = new Conta(123, 111, 100.0);
+		ContaCorrente cc = new ContaCorrente(124, 222, 200.0);
+		ContaPoupanca cp = new ContaPoupanca(125, 333, 300.0);
+				
+		Cliente clientePF = new Cliente("Carlos Menezes", "123456789", "Programado");
+		Cliente cPJ = new Cliente("Carlos Menezes", "123456789", "Programado");
+		Cliente cPJ2 = new Cliente("Carlos Menezes", "123456789", "Programado");
+		 
+
+		//System.out.println("Resultado Conta Comum: " + clientePF.getNome() +  " " + clientePF.getCpf() + " " + clientePF.getProfissao() + " " + contaComum.getAgencia() + " " + contaComum.getNumero() + " " + contaComum.getSaldo());
+		System.out.println("Resultado Conta Corrente: " + cPJ.getNome() +  " " + cPJ.getCpf() + " " + cPJ.getProfissao() + " " + cc.getAgencia() + " " + cc.getNumero() + " " + cc.getSaldo());
+		System.out.println("Resultado Conta Poupança: " + cPJ2.getNome() +  " " + cPJ2.getCpf() + " " + cPJ2.getProfissao() + " " + cp.getAgencia() + " " + cp.getNumero() + " " + cp.getSaldo());
 		
 		
-		Cliente clientePF = new Cliente();
-		clientePF.cpf = "123456789";
-		clientePF.nome = "Carlos Menezes";
-		clientePF.profissao = "Programador";
+		//Transferencia contaComum
 		
-		contaCorrente.titular = new Cliente();
-		contaCorrente.titular.nome = clientePF.cpf;
-		System.out.println(contaCorrente.titular.nome = clientePF.nome);
+		//cc.deposita(50);
+		//System.out.println("Transferencia: " + cc.getSaldo());
+		cp.saca(50);
+		System.out.println("Saldo cp: " + cp.getSaldo());
+		
+		//DEVER DE CASA FIM DE SEMANA
+		//cc.transfere(10.0, 333);
+		System.out.println("Saldo Tranferencia cc: " + cc.getSaldo());
+		System.out.println("Saldo cp: " + cp.getSaldo());
 	}
 
 }
