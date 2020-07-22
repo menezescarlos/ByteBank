@@ -31,17 +31,13 @@ public abstract class Conta {
 		if (this.saldo >= valor) {
 			this.saca(valor);
 			destino.deposita(valor);
-			String retornoTransferencia = "Tranferencia realizado com sucesso";
 			return true;
 		} else {
-			//String retornoTransferencia = "Transferencia não realizado";
 			return false;
 		}
 	}
 	
-	
-	
-	
+
 
 	public double getSaldo() {
 		return saldo;

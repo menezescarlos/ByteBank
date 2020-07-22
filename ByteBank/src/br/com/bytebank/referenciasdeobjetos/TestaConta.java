@@ -27,8 +27,7 @@ public class TestaConta {
 		cp.saca(50);
 		System.out.println("Saldo cp: " + cp.getSaldo());
 		
-		//DEVER DE CASA FIM DE SEMANA
-		//cc.transfere(10.0, 333);
+		cc.transfere(50.0, cp);
 		System.out.println("Saldo Tranferencia cc: " + cc.getSaldo());
 		System.out.println("Saldo cp: " + cp.getSaldo());
 	}
