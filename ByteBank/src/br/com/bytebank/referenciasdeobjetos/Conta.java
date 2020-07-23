@@ -11,12 +11,11 @@ public abstract class Conta {
 		this.setNumero(numero);
 		this.deposita(saldo);
 	}
-	
 
 	public double saca(double valor) {
 		if (saldo >= valor) {
 			this.saldo -= valor;
-			//String retornoSaca = "Saque realizado com sucesso";
+			// String retornoSaca = "Saque realizado com sucesso";
 			return this.saldo;
 		} else {
 			String retornoSaca = "Saque não realizado";
@@ -25,7 +24,6 @@ public abstract class Conta {
 	}
 
 	public abstract void deposita(double valor);
-	
 
 	public boolean transfere(double valor, Conta destino) {
 		if (this.saldo >= valor) {
@@ -36,13 +34,10 @@ public abstract class Conta {
 			return false;
 		}
 	}
-	
-
 
 	public double getSaldo() {
 		return saldo;
 	}
-	
 
 	public int getAgencia() {
 		return agencia;
